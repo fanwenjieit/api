@@ -25,7 +25,7 @@ public class Data {
             String propName = URI.replaceAll("/",".");
             Properties prop = new Properties();
             InputStream inputStream = new FileInputStream(DATA_PATH);
-            BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream));
+            BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream,"UTF-8"));
             prop.load(bf);
             data = prop.getProperty(propName,"null");
         }
